@@ -8,5 +8,5 @@ import retrofit2.http.Query
 interface FoodRecipeAPI {
 
     @GET("/recipes/random")
-    suspend fun getRandomFoodRecipes(@Query("apiKey") apiKey: String): Response<FoodRecipe>
+    suspend fun getRandomFoodRecipes(queries: Map<String,String>): Response<FoodRecipe>
 }
