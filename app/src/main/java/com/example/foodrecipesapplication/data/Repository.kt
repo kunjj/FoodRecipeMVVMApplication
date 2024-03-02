@@ -7,6 +7,6 @@ import javax.inject.Inject
 
 @ActivityRetainedScoped
 class Repository @Inject constructor(private val remoteDataSource: RemoteDataSource) {
-    suspend fun getRandomRecipies(queries: Map<String, String>): Response<FoodRecipe> =
-        remoteDataSource.getRandomRecipies(queries)
+    suspend fun getRandomRecipes(queries: Map<String, String>): Response<FoodRecipe> =
+        remoteDataSource.getRandomRecipes(queries)
 }
