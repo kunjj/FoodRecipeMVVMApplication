@@ -5,6 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
+import coil.load
 import com.example.foodrecipesapplication.R
 
 class RecipeBindingAdapter {
@@ -34,6 +35,14 @@ class RecipeBindingAdapter {
                         view.setColorFilter(ContextCompat.getColor(view.context, R.color.green))
                     }
                 }
+            }
+        }
+
+        @BindingAdapter("imageFromUrl")
+        @JvmStatic
+        fun loadImageFromUrl(imageView: ImageView, url: String) {
+            imageView.load(url) {
+                crossfade(600)
             }
         }
     }
