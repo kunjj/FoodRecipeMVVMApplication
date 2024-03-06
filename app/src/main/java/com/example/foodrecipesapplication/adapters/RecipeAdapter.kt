@@ -23,7 +23,7 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
         override fun areContentsTheSame(oldItem: Recipe, newItem: Recipe) = oldItem == newItem
     }
 
-    private var recipes = AsyncListDiffer(this, recipesDifferList)
+    var recipes = AsyncListDiffer(this, recipesDifferList)
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
